@@ -5,6 +5,7 @@
 - PC端
   - [SmartGit](https://www.syntevo.com/smartgit/) 
   - [Sourcetree](https://cn.atlassian.com/software/sourcetree)   ***推荐免费***
+  - [TortoiseGit](https://tortoisegit.org/)
 - 手机端 
   - Grape For GitHub
 
@@ -51,7 +52,9 @@
 ```
 ### 对于已经存在的仓库 关联
 ```
+git branch --set-upstream-to=origin/remote_branch  your_branch
 
+其中，origin/remote_branch是你本地分支对应的远程分支；your_branch是你当前的本地分支。
 ```
 
 ### git commit 但是没有使用git push，现在发现有文件误提交了
