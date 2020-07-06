@@ -1,3 +1,0 @@
-- 1、Eureka client和 Eureka Server之间是推模式还是拉模式呢？
-- 2、where a=1 and b=2?a和b都是索引，具体走哪一个索引？
-- 
