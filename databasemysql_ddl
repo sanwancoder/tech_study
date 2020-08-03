@@ -1,0 +1,40 @@
+-- 楼栋基本信息表
+-- 保持建表幂等
+DROP TABLE IF EXISTS bm_building;
+
+-- 建表语句
+CREATE TABLE bm_building (
+building_id 		    BIGINT(11)  NOT NULL AUTO_INCREMENT COMMENT '主键',
+building_type 		    VARCHAR(100) 		COMMENT '楼宇类型',
+grid_id                 BIGINT(11)          COMMENT '网格ID',
+building_name           VARCHAR(100)		COMMENT '楼宇名称',
+building_use		    VARCHAR(100)		COMMENT '用途分类',
+building_status		    VARCHAR(100)		COMMENT '楼宇状态',
+building_structure	    VARCHAR(100)		COMMENT '楼宇结构',
+building_useage		    VARCHAR(100)		COMMENT '使用现状',
+construction_time	    DATETIME			COMMENT '建筑时间',
+building_addr		    VARCHAR(100)		COMMENT '所处位置',
+community_name		    VARCHAR(100)		COMMENT '小区（单位）名称',
+building_leader		    VARCHAR(100)		COMMENT '楼栋长',
+layer_count			    INT(11)				COMMENT '楼层数',
+basement_layer_count	INT(11)				COMMENT '地下楼层数',
+house_begin_layer	    INT(11)				COMMENT '住宅开始层数',
+unit_count			    INT(11)				COMMENT '单元数',
+layer_room_count	    INT(11)				COMMENT '每层每单元户数',
+room_count			    INT(11)				COMMENT '总房屋数',
+elevator_count		    INT(11)				COMMENT '电梯数量',
+building_area		    DECIMAL				COMMENT '建筑面积',
+building_pmc		    VARCHAR(100)		COMMENT '物业公司',
+building_desc		    VARCHAR(200)		COMMENT '介绍',
+point_status            VARCHAR(100)		COMMENT '标绘状态',
+longitude			    DECIMAL				COMMENT '经度',
+latitude			    DECIMAL				COMMENT '纬度',
+plat_code			    VARCHAR(100)		COMMENT '数据来源',
+create_by			    BIGINT(11)			COMMENT '创建人',
+create_date			    DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP		           				COMMENT '创建时间',
+update_by			    BIGINT(11)																COMMENT '最后修改人',
+update_date			    DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后修改时间',
+delete_flag			    VARCHAR	(1)																COMMENT '删除状态 0正常 1 已删除',
+versions			    INT(11)			  DEFAULT 0												COMMENT '乐观锁',
+PRIMARY KEY (building_id) USING BTREE
+)ENGINE=INNODB DEFAULT CHARSET=utf8 COMMENT '楼栋基本信息表';
