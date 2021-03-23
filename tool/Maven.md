@@ -53,3 +53,6 @@ maven是一个跨平台的项目管理工具，主要服务于Java平台的项�
 ### 书籍推荐
 
 - [Maven实战](https://book.douban.com/subject/5345682/)  **看此书足矣**
+
+### 相关知识总结
+- [Settings Reference](http://maven.apache.org/settings.html)
